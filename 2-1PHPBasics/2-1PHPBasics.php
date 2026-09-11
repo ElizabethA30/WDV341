@@ -26,10 +26,13 @@
     echo "<h3> Added together the value is " . "$total </h3>";
 
     $languages = ["PHP", "HTML", "Javascript"];
+
+    echo "<ul>";
         foreach ($languages as $language)
         {
-            echo "<ul> $language </ul>" ;
+            echo "<li> $language </li>" ;
         }
+    echo "</ul>";
     ?>
 
 
