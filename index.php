@@ -14,5 +14,8 @@ echo 'WDV341 Homework Page';
 <br>
 <h3>Unit 2</h3>
 <a href="2-1PHPBasics/2-1PHPBasics.php">2-1 PHP Basics</a>
+
+<h3>Unit 2</h3>
+<a href="3-1PHPFunctions/3-1PHPFunctions.php">3-1 PHP Functions</a>
 </body>
 </html>
