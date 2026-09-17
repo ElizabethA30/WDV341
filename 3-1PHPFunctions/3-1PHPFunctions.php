@@ -6,21 +6,21 @@
     <title>3-1 PHP Functions</title>
 </head>
 <?php 
-$unixTimestamp = 10000000;
+$timestamp = "2026-09-17";
 
-function mmddyyformat($unixTimestamp) {
-   echo date('m/d/Y', $unixTimestamp); 
+function mmddyyformat($timestamp) {
+   echo date('m/d/Y', strtotime($timestamp)); 
 }
 
-mmddyyformat($unixTimestamp);
+mmddyyformat($timestamp);
 
 echo "<br> <br>";
 
-function ddmmyyformat($unixTimestamp) {
-   echo date('d/m/Y', $unixTimestamp); 
+function ddmmyyformat($timestamp) {
+   echo date('d/m/Y', strtotime($timestamp)); 
 }
 
-ddmmyyformat($unixTimestamp);
+ddmmyyformat($timestamp);
 
 echo "<br> <br>";
 
@@ -28,8 +28,14 @@ $string = "    Elizabeth Acheson DmaCc   "   ;
 
 function stringFormat($string) {
     echo "The amount of characters in the string is " . strlen($string);
+   
     echo "<br> <br>";
+
     $string = trim($string);
+
+    echo "Here is the string trimmed " . $string;
+
+    echo "<br> <br>";
 
     $string = strtolower($string);
 
@@ -40,10 +46,10 @@ function stringFormat($string) {
     $find = "dmacc";
 
     if (str_contains($string, $find)){
-        echo "dmacc was found!";
+        echo "dmacc was found in the string!";
     }
     else {
-        echo "dmacc was not found!";
+        echo "dmacc was not found in the string!";
     };
 }
 
