@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WDV101 Intro HTML and CSS</title>
+
+    <style>
+        form {
+            width: 50%;
+            margin: auto;
+            background-color: lightcyan;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        form legend {
+            font-size: larger;
+            text-align: center;
+        }
+
+        .form_group {
+            gap: .5rem;
+        }
+
+
+        .full {
+            grid-column: span 2;
+        }
+
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        .grid_inputs  {
+            display: grid;
+            /* max-width: 200px; */
+            grid-template-columns: 100px auto;
+        }
+
+        .labelFirstName{
+            width: 100px;
+        }
+
+        .row-gap {
+            row-gap: 0.75rem;
+        }
+
+        .col-gap {
+            column-gap: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- <h1>WDV341 Intro PHP</h1>
+    <h2>UNIT 3 - Server Side Forms</h2>
+    <p>This is an example input form that will demonstrate how a form connects to a server side process.</p> -->
+    <form id="form1" name="form1" method="post" action="formHandler.php" class="col-gap row-gap">
+
+        <legend class="full">School Contact Form</legend>
+
+        <div class="form_group grid_inputs">
+            <label class="labelFirstName" for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" />
+        </div>
+
+        <div class="form_group grid_inputs">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" />
+        </div>
+
+        <div class="form_group grid_inputs">
+            <label for="school_name">School Name:</label>
+            <input type="text" name="school_name" id="school_name" />
+        </div>
+
+        <div class="form_group grid_inputs">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" />
+        </div>
+
+        <div class="form_group full">
+            <p>Current Academic Standing:</p>
+            <p>
+                <input type="radio" name="academic_standing" id="high_school" value="High Schooler" />
+                <label for="high_school">High School</label>
+            </p>
+
+            <p>
+                <input type="radio" name="academic_standing" id="freshman" value="Freshman" />
+                <label for="freshman">Freshman</label>
+            </p>
+
+            <p>
+                <input type="radio" name="academic_standing" id="sophomore" value="Sophomore" />
+                <label for="sophomore">Sophomore</label>
+            </p>
+        </div>
+
+        <div class="form_group full">
+            <label for="degree">Select your Degree:</label>
+            <select name="degree" id="degree">
+                <option value="DO">Default Option</option>
+                <option value="CIS">Computer Information Systems</option>
+                <option value="GRD">Graphic Design</option>
+                <option value="WDV">Web Development</option>
+            </select>
+        </div>
+
+        <div class="form_group full">
+            <p>Contact Prefrences</p>
+            <p>
+                <input type="checkbox" id="program_information" name="program_contacts[]"
+                    value="Please contact me with program information">
+                <label for="program_information">Please contact me with program information.</label><br>
+
+                <input type="checkbox" id="program_advisor" name="program_contacts[]"
+                    value="I would like to contact an program advisor">
+                <label for="program_advisor">I would like to contact an program advisor.</label>
+            </p>
+        </div>
+
+        <div class="form_group full">
+            <label for="comments">Additional Comments</label> <br>
+
+            <textarea id="comments" name="comments" rows="5" cols="60"></textarea>
+        </div>
+        <p class="full">
+            <input type="submit" name="button" id="button" value="Submit" />
+            <input type="reset" name="button2" id="button2" value="Reset" />
+        </p>
+
+        <div style="display:none;">
+            <label for="">Website</label>
+            <input type="text" name="website" id="website">
+        </div>
+
+    </form>
+
+    <p>&nbsp;</p>
+</body>
+
+</html>
