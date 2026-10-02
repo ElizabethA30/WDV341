@@ -100,10 +100,6 @@
             }
 
 
-            // foreach ($_POST['program_contacts'] as $program_contact) {
-            //     echo "<li>" . htmlspecialchars($program_contact) . "</li>";
-            // };
-
             echo "</p> </ul>";
 
             echo "<p> You have shared the following comments which we will review: <br> " . htmlspecialchars($comments) . " </p>";
