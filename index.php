@@ -23,5 +23,8 @@ echo 'WDV341 Homework Page';
 
 <h3>Unit 5</h3>
 <a href="5-1HTMLFormProcessor/inputForm.html">5-1 HTML Form Processor</a>
+
+<h3>Unit 6</h3>
+<a href="6-1ImageFileUploader/upload.php">6-1 Image File Uploader</a>
 </body>
 </html>
