@@ -1,5 +1,5 @@
 <?php
-$message="";
+$message = "";
 $fileName = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_FILES["imageFile"]["error"] == 0) {
@@ -18,39 +18,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $honeypot =  trim($_POST["website"] ?? "");
 
         if ($honeypot !== "") {
-            $message= "Submission was incorrect";
+            $message = "Submission was incorrect";
         } else {
             if (in_array($fileExtension, $allowedTypes)) {
                 if ($fileSize <= 500000) {
 
                     if (move_uploaded_file($temporaryFile, $destination)) {
-                        $message= "File uploaded successfully.";
+                        $message = "File uploaded successfully.";
                     } else {
-                        $message= "Unable to save file.";
+                        $message = "Unable to save file.";
                     }
                 } else {
-                    $message= "File too Large.";
+                    $message = "File too Large.";
                 }
             } else {
-                $message= "Only image files are allowed.";
+                $message = "Only image files are allowed.";
             }
         }
     } else {
         $fileName = "Error";
-        $message= "There was an error uploading the file.";
+        $message = "There was an error uploading the file.";
     }
 
-if (file_exists("uploads/$fileName")) {
+    if (file_exists("uploads/$fileName")) {
         echo "<img src='uploads/$fileName' alt='image' >";
         echo "<br>" . $message;
     } else {
         echo "Please Try Again. <br>";
         echo $message;
-    } 
-
+    }
 }
 
- 
+
 
 ?>
 
@@ -72,12 +71,14 @@ if (file_exists("uploads/$fileName")) {
 
         <input type="submit" value="Upload Image">
 
+        <div style="display:none;">
+            <label for="">Website</label>
+            <input type="text" name="website" id="website">
+        </div>
+
     </form>
 
-    <div style="display:none;">
-        <label for="">Website</label>
-        <input type="text" name="website" id="website">
-    </div>
+
 
 </body>
 
