@@ -26,5 +26,8 @@ echo 'WDV341 Homework Page';
 
 <h3>Unit 6</h3>
 <a href="6-1ImageFileUploader/upload.php">6-1 Image File Uploader</a>
+
+<h3>Unit 7</h3>
+<a href="7-1ContactFormWithEmail/contactForm.php">7-1 Contact Form with Email</a>
 </body>
 </html>
